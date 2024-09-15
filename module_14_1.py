@@ -7,10 +7,22 @@ if __name__=='__main__':
     email TEXT NOT NULL, age INTEGER, balance INTEGER NOT NULL)''')
     cursr.execute('CREATE INDEX IF NOT EXISTS indx_mail ON Users (email)')
     for i in range(10):
-        try:
+        cursr.execute(f"SELECT * FROM Users WHERE email='example{i}@gmail.com'")
+        usr = cursr.fetchall()
+        if not usr:
             cursr.execute('''INSERT INTO Users (username, email, age, balance)
             VALUES (?,?,?,?)''',(f'User{i}',f'example{i}@gmail.com',random.randint(0,100),1000))
-        except Exception as E:
-            pass
+
+    for i in range(10):
+        if i%2!=0:
+            cursr.execute('UPDATE Users SET balance =500 WHERE username=?',(f'User{i}',))
+    for i in range(10):
+        if (i+2)%3==0:
+            cursr.execute('DELETE FROM Users WHERE username=?',(f'User{i}',))
+
     conec.commit()
+    cursr.execute('SELECT username,email,age,balance FROM Users WHERE not age=60')
+    user60 = cursr.fetchall()
+    for us in user60:
+        print(f'Имя: {us[0]}| Почта: {us[1]} | Возраст: {us[2]} | Баланс: {us[3]}')
     conec.close()
