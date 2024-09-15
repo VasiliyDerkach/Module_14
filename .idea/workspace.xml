@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1736964-6d79-462c-8d8b-aa414ee13ca7" name="Changes" comment="1509">
+    <list default="true" id="f1736964-6d79-462c-8d8b-aa414ee13ca7" name="Changes" comment="1509+">
+      <change afterPath="$PROJECT_DIR$/module_14_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_14_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_14_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +34,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.module_14_1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/PythonCurse/module_14",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\PythonCurse\module_14" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -71,11 +78,20 @@
       <option name="project" value="LOCAL" />
       <updated>1726409199839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1509+">
+      <option name="closed" value="true" />
+      <created>1726413209287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726413209287</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1509" />
-    <option name="LAST_COMMIT_MESSAGE" value="1509" />
+    <MESSAGE value="1509+" />
+    <option name="LAST_COMMIT_MESSAGE" value="1509+" />
   </component>
 </project>
