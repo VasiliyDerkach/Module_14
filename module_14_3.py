@@ -20,13 +20,14 @@ with open('conf_both.cnf', 'r') as cnf:
 
 bot = Bot(token=key_bot_api)
 disp = Dispatcher(bot, storage=MemoryStorage())
-keybr = ReplyKeyboardMarkup(resize_keyboard=True)
-butt_inf = KeyboardButton(text='Информация')
-butt_sc = KeyboardButton(text='Рассчитать')
-butt_buy = KeyboardButton(text='Купить')
-keybr.add(butt_inf)
-keybr.add(butt_sc)
-keybr.add(butt_buy)
+keybr = ReplyKeyboardMarkup(
+        keyboard=[
+                [
+                    KeyboardButton(text='Информация'),
+                    KeyboardButton(text='Рассчитать')
+                ],
+                [KeyboardButton(text='Купить')]
+            ], resize_keyboard=True)
 
 ikeybrt = InlineKeyboardMarkup()
 butt_1 = InlineKeyboardButton(text='Рассчитать норму калорий' , callback_data='calories')
