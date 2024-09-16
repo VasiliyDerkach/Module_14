@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1736964-6d79-462c-8d8b-aa414ee13ca7" name="Changes" comment="1609+">
+      <change afterPath="$PROJECT_DIR$/crud_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module_14_4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_14_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_14_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not_telegram.db" beforeDir="false" afterPath="$PROJECT_DIR$/not_telegram.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,17 +34,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.module_14_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_14_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_14_3.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/PythonCurse/module_14&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.crud_functions.executor": "Run",
+    "Python.module_14_1.executor": "Run",
+    "Python.module_14_2.executor": "Run",
+    "Python.module_14_3.executor": "Run",
+    "Python.module_14_4.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/PythonCurse/module_14",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\PythonCurse\module_14" />
@@ -128,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726477540166</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1609+">
+      <option name="closed" value="true" />
+      <created>1726478593874</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726478593874</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
