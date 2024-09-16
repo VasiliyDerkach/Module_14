@@ -36,11 +36,11 @@ ikeybrt.add(butt_2)
 ikey_buy = InlineKeyboardMarkup()
 butt_b1 = InlineKeyboardButton(text='Product1' , callback_data='product_buying')
 ikey_buy.add(butt_b1)
-butt_b1 = InlineKeyboardButton(text='Product2' , callback_data='product_buying')
+butt_b2 = InlineKeyboardButton(text='Product2' , callback_data='product_buying')
 ikey_buy.add(butt_b2)
-butt_b1 = InlineKeyboardButton(text='Product3' , callback_data='product_buying')
+butt_b3 = InlineKeyboardButton(text='Product3' , callback_data='product_buying')
 ikey_buy.add(butt_b3)
-butt_b1 = InlineKeyboardButton(text='Product4' , callback_data='product_buying')
+butt_b4 = InlineKeyboardButton(text='Product4' , callback_data='product_buying')
 ikey_buy.add(butt_b4)
 
 @disp.message_handler(text = 'Рассчитать')
@@ -53,10 +53,10 @@ async def get_formulas(call):
 
 @disp.message_handler(text='Купить')
 async def get_buying_list(message):
-    for number in range(1,4):
-        with open(f'../images/product{number}.webp','rb') as imge:
+    for number in range(1,5):
+        with open(f'images/product{number}.webp','rb') as imge:
             await message.answer_photo(imge,f'Название: Product{number} | Описание: описание {number} | Цена: {number * 100}')
-    await message.answer(reply_markup=ikey_buy)
+    await message.answer(text='Выберите продукт: ',reply_markup=ikey_buy)
 
 @disp.callback_query_handler(text='product_buying')
 async def send_confirm_message(call):
