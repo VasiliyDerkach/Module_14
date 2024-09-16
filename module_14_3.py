@@ -23,14 +23,26 @@ disp = Dispatcher(bot, storage=MemoryStorage())
 keybr = ReplyKeyboardMarkup(resize_keyboard=True)
 butt_inf = KeyboardButton(text='Информация')
 butt_sc = KeyboardButton(text='Рассчитать')
+butt_buy = KeyboardButton(text='Купить')
 keybr.add(butt_inf)
 keybr.add(butt_sc)
+keybr.add(butt_buy)
 
 ikeybrt = InlineKeyboardMarkup()
 butt_1 = InlineKeyboardButton(text='Рассчитать норму калорий' , callback_data='calories')
 butt_2 = InlineKeyboardButton(text='Формулы расчёта' , callback_data='calories')
 ikeybrt.add(butt_1)
 ikeybrt.add(butt_2)
+ikey_buy = InlineKeyboardMarkup()
+butt_b1 = InlineKeyboardButton(text='Product1' , callback_data='product_buying')
+ikey_buy.add(butt_b1)
+butt_b1 = InlineKeyboardButton(text='Product2' , callback_data='product_buying')
+ikey_buy.add(butt_b2)
+butt_b1 = InlineKeyboardButton(text='Product3' , callback_data='product_buying')
+ikey_buy.add(butt_b3)
+butt_b1 = InlineKeyboardButton(text='Product4' , callback_data='product_buying')
+ikey_buy.add(butt_b4)
+
 @disp.message_handler(text = 'Рассчитать')
 async def main_menu(message):
     await message.answer(text='Выберите опцию:', reply_markup=ikeybrt)
@@ -39,6 +51,17 @@ async def get_formulas(call):
     await call.message.answer('Формула: 10 х вес (кг) + 6,25 x рост (см) – 5 х возраст (г) + 5')
     await call.answer()
 
+@disp.message_handler(text='Купить')
+async def get_buying_list(message):
+    for number in range(1,4):
+        with open(f'../images/product{number}.webp','rb') as imge:
+            await message.answer_photo(imge,f'Название: Product{number} | Описание: описание {number} | Цена: {number * 100}')
+    await message.answer(reply_markup=ikey_buy)
+
+@disp.callback_query_handler(text='product_buying')
+async def send_confirm_message(call):
+    await call.message.answer('Вы успешно приобрели продукт!')
+    await call.answer()
 @disp.message_handler(commands=['start'])
 async def start(message):
     await message.answer('Привет! Я бот помогающий твоему здоровью. У меня есть клавиатура', reply_markup= keybr)
