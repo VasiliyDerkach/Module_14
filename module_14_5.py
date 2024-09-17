@@ -60,15 +60,29 @@ async def sing_up(message):
     await RegistrationState.username.set()
 @disp.message_handler(state=RegistrationState.username)
 async def set_username(message, state):
-    if crud_functions_.is_included(cursr,message.text):
+    if not crud_functions_.is_included(cursr,message.text):
         await state.update_data(username=message.text)
         await message.answer('Введите свой email:')
         await RegistrationState.email.set()
-        #crud_functions_.add_user(conec,cursr,)
+
     else:
         await message.answer('Пользователь существует, введите другое имя')
         await sing_up(message)
+@disp.message_handler(state=RegistrationState.email)
+async def set_email(message, state):
+    await state.update_data(email=message.text)
+    await message.answer('Введите свой возраст:')
+    await RegistrationState.age.set()
 
+@disp.message_handler(state=RegistrationState.age)
+async def set_age(message, state):
+    await state.update_data(age=message.text)
+    data = await state.get_data()
+    if crud_functions_.add_user(conec,cursr, data['username'], data['email'], data['age']):
+        await message.answer('Данные успешно зарегистрированы')
+    else:
+        await message.answer('Произошла ошибка регистрирации')
+    await state.finish()
 @disp.message_handler(text='Купить')
 async def get_buying_list(message):
 

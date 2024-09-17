@@ -12,13 +12,13 @@ def get_all_products(cursr):
     return cursr.fetchall()
 
 def is_included(cursr,username):
-    f = cursr.execute(f'SELECT * FROM Users WHERE username={username}').fetchone[0]
+    f = cursr.execute(f"SELECT * FROM Users WHERE username=?",(username,))
     if f:
         return True
     else:
         return False
 def add_user(connect,cursr,username, email, age):
-    if is_included(cursr,username):
+    if not is_included(cursr,username):
         cursr.execute('INSERT INTO Users (username, email, age, balance) VALUES (?,?,?,?)',(username, email, age,1000))
         connect.commit()
         return True
