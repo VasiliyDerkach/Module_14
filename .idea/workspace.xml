@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1736964-6d79-462c-8d8b-aa414ee13ca7" name="Changes" comment="1609+">
-      <change afterPath="$PROJECT_DIR$/crud_functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module_14_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crud_functions_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module_14_5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/module_14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module_14.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/not_telegram.db" beforeDir="false" afterPath="$PROJECT_DIR$/not_telegram.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +45,13 @@
     "Python.module_14_4.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/PythonCurse/module_14",
+    "last_opened_file_path": "C:/Users/1/PycharmProjects/Module_14",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\1\PycharmProjects\Module_14" />
       <recent name="C:\PythonCurse\module_14" />
     </key>
   </component>

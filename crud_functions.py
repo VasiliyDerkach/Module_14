@@ -8,3 +8,4 @@ def initiate_db(cursr):
 def get_all_products(cursr):
     cursr.execute('SELECT * FROM Products')
     return cursr.fetchall()
+
