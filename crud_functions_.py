@@ -12,8 +12,10 @@ def get_all_products(cursr):
     return cursr.fetchall()
 
 def is_included(cursr,username):
-    f = cursr.execute(f"SELECT * FROM Users WHERE username=?",(username,))
+    f = cursr.execute("SELECT * FROM Users WHERE username=?",(username,)).fetchone()
+    print(username,f)
     if f:
+        print(f[0])
         return True
     else:
         return False
